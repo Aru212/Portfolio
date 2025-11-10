@@ -1122,71 +1122,15 @@
     </footer>
 
     <script>
-        function downloadResume(event) {
-            event.preventDefault();
-            
-            const resumeContent = `
-ARUN KUMAR S
-Full Stack Developer | Fresh Graduate
-Email: arunneelavathi3366@gmail.com | Phone: +91-9019839694
-Location: Bengaluru, India | LinkedIn: linkedin.com/in/arun-kumar030
-
-PROFILE
-An independent and self-motivated Computer Science student with a passion for learning and innovation. 
-Possesses strong problem-solving skills, attention to detail, and the ability to work effectively both 
-independently and as part of a team.
-
-EDUCATION
-Master of Computer Application - CMR Institute of Management Studies (2023 – 2025) | CGPA: 7.9
-Bachelor of Computer Science - Govt First Grade College (2020 – 2023) | CGPA: 8.3
-
-INTERNSHIP
-Front-end Development Intern - Telerad Tech (December 2024)
-- Developed responsive web application using React.js and TailwindCSS
-- Enhanced UI for Eguru+ platform for medical professionals
-- Managed database optimization using phpMyAdmin
-- Collaborated with back-end developers for seamless integration
-
-SKILLS
-Programming: Python, Java, JavaScript, PHP
-Web Development: React.js, Node.js, HTML, CSS, TailwindCSS
-Database: MySQL, SQL, phpMyAdmin
-Tools: Visual Studio, Eclipse
-Soft Skills: Adaptability, Communication, Problem-solving, Leadership, Team-work
-
-PROJECTS
-Hospital Management System (August 2025)
-- Full-stack system using React.js, Node.js, and MySQL
-- Responsive interface for managing patients, doctors, and appointments
-- Secure RESTful APIs with optimized database queries
-
-Plant Disease Detection (June 2024)
-- CNN-based system for disease identification
-- High precision analysis of leaf images
-- Support for farmers in crop health management
-
-Airline Management System (August 2023)
-- Visual Basic 6.0 based system
-- Flight scheduling and passenger booking management
-
-CERTIFICATIONS
-- Joy of Computing using Python
-- Full Stack Web Development - Udemy
-            `;
-
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Arun_Kumar_S_Resume.txt';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
-            
-            alert('✅ Resume downloaded successfully! Check your downloads folder.');
-        }
-
+       function downloadResume(event) {
+    event.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'ArunKumarS Resume.pdf'; // your local PDF file path
+    link.download = 'Arun_Kumar_S_Resume.pdf'; // downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             if (section) {
@@ -1230,7 +1174,6 @@ CERTIFICATIONS
             });
         });
 
-        // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             const sideNav = document.getElementById('sideNav');
             const menuBtn = document.querySelector('.mobile-menu-btn');
