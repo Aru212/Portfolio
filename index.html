@@ -270,6 +270,41 @@
             box-shadow: 0 15px 40px rgba(16, 185, 129, 0.6);
         }
 
+ .contact-info {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-info > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .contact-info a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #667eea;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            transition: all 0.3s;
+            padding: 1rem;
+            border-radius: 15px;
+        }
+
+        .contact-info a:hover {
+            transform: translateY(-5px);
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .contact-info a span {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 0.5rem;
+        }
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -884,8 +919,8 @@
                                 <div class="stat-label">Projects</div>
                             </div>
                             <div class="stat-box">
-                                <div class="stat-number">CGPA 7.9</div>
-                                <div class="stat-label">MCA</div>
+                                <div class="stat-number"> 7.9</div>
+                                <div class="stat-label">MCA CGPA</div>
                             </div>
                             <div class="stat-box">
                                 <div class="stat-number">2+</div>
@@ -1088,22 +1123,22 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <p style="text-align: center; font-size: 1.3rem; color: #666; margin-bottom: 1rem; font-weight: 600;">I'm actively seeking opportunities! Let's connect and discuss how I can contribute to your team.</p>
                 <!-- <p style="text-align: center; font-size: 1.1rem; color: #10b981; margin-bottom: 3rem; font-weight: 700;">Available for Immediate Joining</p> -->
-                <div class="contact-info" style="text-align: center;">
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-                        <a href="mailto:arunneelavathi3366@gmail.com" style="flex-direction: column; font-size: 1.2rem;text-decoration: none;">
-                            <span style="font-size: 2.5rem;">📧</span><br>
+              <div class="contact-info">
+                    <div>
+                        <a href="mailto:arunneelavathi3366@gmail.com">
+                            <span>📧</span>
                             arunneelavathi3366@gmail.com
                         </a>
-                        <a href="tel:+919019839694" style="flex-direction: column; font-size: 1.2rem;text-decoration: none;">
-                            <span style="font-size: 2.5rem;">📱</span><br>
+                        <a href="tel:+919019839694">
+                            <span>📱</span>
                             +91-9019839694
                         </a>
-                        <a href="https://linkedin.com/in/arun-kumar030" target="_blank" style="flex-direction: column; font-size: 1.2rem;text-decoration: none;">
-                            <span style="font-size: 2.5rem;">💼</span><br>
+                        <a href="https://linkedin.com/in/arun-kumar030" target="_blank">
+                            <span>💼</span>
                             LinkedIn Profile
                         </a>
-                        <a href="#" style="flex-direction: column; font-size: 1.2rem;text-decoration: none;">
-                            <span style="font-size: 2.5rem;">📍</span><br>
+                        <a href="#">
+                            <span>📍</span>
                             Bengaluru, India
                         </a>
                     </div>
@@ -1188,3 +1223,4 @@
     </script>
 </body>
 </html>
+
